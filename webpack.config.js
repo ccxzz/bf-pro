@@ -1,15 +1,17 @@
 const path = require('path')
-const webapck = require('webpack')
+const webpack = require('webpack')
 const Entry = require('./webpack-pkg/entry')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const entries = Entry.getEntries('./src/page/**/**.js');
+
 module.exports = {
-    entry: Entry.getEntries('./src/page/**/**.js'),
+    entry: {},
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'js/[name].js',
-        publicPath: "../"
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -31,12 +33,13 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('css/[name].css')
     ]
 }
 
-Object.keys(Entry.getEntries('./src/page/**/**.js')).forEach(function(name) {
-    // module.exports.entry[name] = entries[name];
+Object.keys(entries).forEach(function(name) {
+    module.exports.entry[name] = ['webpack-dev-server/client?http://localhost:8080/',entries[name]];
 
     let plugin = new HtmlWebpackPlugin({
         filename: 'html/'+name+'.html',
