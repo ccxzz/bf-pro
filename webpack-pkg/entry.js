@@ -9,7 +9,7 @@ module.exports = {
             var split = filepath.split('/');
             var name = split[split.length - 2];
 
-            entries[name] = './' + filepath;
+            entries[name] = filepath;
         });
         return entries;
     }

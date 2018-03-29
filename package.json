@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base dist --inline --hot",
+    "dev": "webpack --config build/webpack.prod.conf.js",
+    "start": "webpack-dev-server --inline --hot --compress --open --open-page html/main.html --config build/webpack.dev.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +22,13 @@
     "ansi-styles": "^3.2.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     "color-name": "^1.1.3",
     "css-loader": "^0.28.11",
     "cssesc": "^1.0.1",
@@ -37,9 +44,14 @@
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
     "regexpu-core": "^4.1.3",
     "style-loader": "^0.20.3",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.2"
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
   }
 }

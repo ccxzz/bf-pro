@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const entries = Entry.getEntries('./src/page/**/**.js');
 
 module.exports = {
-    entry: {},
+    entry: {babelPolyfill:"babel-polyfill"},
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'js/[name].js',
@@ -26,6 +26,14 @@ module.exports = {
                     fallback: 'style-loader',
                     use: ['css-loader', 'less-loader']
                 })
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'image/[hash:8].[name].[ext]'
+                }
             }
         ]
     },
@@ -34,7 +42,8 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('css/[name].css')
+        new ExtractTextPlugin('css/[name].css'),
+        new webpack.optimize.CommonsChunkPlugin({name:'common'}),
     ]
 }
 
