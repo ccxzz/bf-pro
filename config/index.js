@@ -5,6 +5,7 @@ module.exports = {
     dev: {
         NODE_ENV: '"development"',
         assetsOutPath:  path.resolve(__dirname, '../dist'),
+        entryPath:  path.resolve(__dirname, '../src/page/**/**.js'),
         cssPath: 'css/[name].css',
         assetsPublicPath: '/',
         devtool: 'eval-source-map',

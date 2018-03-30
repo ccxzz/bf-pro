@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config build/webpack.prod.conf.js",
-    "start": "webpack-dev-server --inline --hot --compress --open --open-page html/main.html --config build/webpack.dev.conf.js",
+    "build": "webpack --config build/webpack.prod.conf.js",
+    "dev": "webpack-dev-server --inline --hot --compress --open --open-page html/main.html --config build/webpack.dev.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
