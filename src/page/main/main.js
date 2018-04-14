@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import maincss from './main.less'
+import './main.less'
 
-var myDivElement = '';
+var myDivElement = <div>1111111111</div>;
 render(myDivElement, document.getElementById('app'));
