@@ -1,4 +1,7 @@
 const path = require('path')
+function resolvePath (dir) {
+    return path.join(__dirname, '..', dir)
+}
 module.exports = {
     context: path.resolve(__dirname, '../'),
     entry: {babelPolyfill:"babel-polyfill"},
@@ -7,7 +10,7 @@ module.exports = {
             {
                 test: /\.js|jsx$/,
                 loaders: ['babel-loader'],
-                exclude: /node_modules/
+                include: [resolvePath('src'), resolvePath('/node_modules/antd')]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
