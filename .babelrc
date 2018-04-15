@@ -5,7 +5,7 @@
     "react",
     "env"
   ],
-  "plugins": ["transform-runtime", "transform-react-jsx", ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]],
+  "plugins": ["transform-runtime", "transform-react-jsx", "transform-class-properties", ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]],
   "env": {
     "production":{
       "preset":["react-optimize"]
