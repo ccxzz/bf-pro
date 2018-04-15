@@ -41,7 +41,8 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
             root: path.resolve(__dirname, '../'),
             verbose: true
         }),
-        new ExtractTextPlugin('css/[name].[contenthash].css')
+        new ExtractTextPlugin('css/[name].[contenthash].css'),
+        new webpack.optimize.UglifyJsPlugin()
     ]
 })
 
