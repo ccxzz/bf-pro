@@ -37,6 +37,7 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
                 NODE_ENV: config.build.NODE_ENV
             }
         }),
+        new webpack.optimize.CommonsChunkPlugin({name:'common'}),
         new CleanWebpackPlugin(config.build.assetsOutPath, {
             root: path.resolve(__dirname, '../'),
             verbose: true

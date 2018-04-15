@@ -1,7 +1,8 @@
 import React from 'react';
 import './playlist.less';
 import { Row, Col } from 'antd';
-import PlayUserAccount from './playuseraccount'
+import PlayUserAccount from './playuseraccount';
+import PlayGames from './playgames';
 
 class playlist extends React.Component {
     constructor() {
@@ -24,6 +25,7 @@ class playlist extends React.Component {
                 <Row>
                     <Col offset={3} span={18}>
                         <PlayUserAccount/>
+                        <PlayGames/>
                     </Col>
                 </Row>
             </div>
