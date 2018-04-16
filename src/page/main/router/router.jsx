@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Header from '../components/header/header';
 import Banner from '../components/banner/banner';
 import Footer from '../components/footer/footer';
@@ -20,13 +20,20 @@ class router extends React.Component {
     }
 
     render() {
+        const IndexPage = () => (
+            <div>
+                <Banner/>
+                <PlayList/>
+            </div>
+        );
         return (
             <Router>
                 <div>
-                    <Route path="/" component={Header} />
-                    <Route path="/" component={Banner} />
-                    <Route path="/" component={PlayList} />
-                    <Route path="/" component={Footer} />
+                    <Header/>
+                    <Switch>
+                        <Route path="/" exact component={IndexPage}/>
+                    </Switch>
+                    <Footer/>
                 </div>
             </Router>
         );
