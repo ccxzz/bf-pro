@@ -34,8 +34,8 @@ class header extends React.Component {
                         <div className="userLogin">
                             游客
                             <span className="text-orange">123456</span> /
-                            <a href="/html/index.html">登录</a>or
-                            <a href="/html/index.html">注册</a>
+                            <a href="/html/index.html#/">登录</a>or
+                            <a href="/html/index.html#/register">注册</a>
                         </div>
                     </Col>
                 </Row>
