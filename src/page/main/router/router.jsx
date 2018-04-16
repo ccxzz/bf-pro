@@ -5,6 +5,7 @@ import Banner from '../components/banner/banner';
 import Footer from '../components/footer/footer';
 import PlayList from '../components/playlist/playlist';
 import Exception from '../components/exception/exception';
+import Recharge from '../components/recharge/recharge';
 
 class router extends React.Component {
     constructor() {
@@ -27,12 +28,19 @@ class router extends React.Component {
                 <PlayList/>
             </div>
         );
+        const RechargePage = () => (
+            <div>
+                <Banner/>
+                <Recharge/>
+            </div>
+        );
         return (
             <Router>
                 <div>
                     <Header/>
                     <Switch>
                         <Route path="/" exact component={IndexPage}/>
+                        <Route path="/recharge" exact component={RechargePage}/>
                         <Route component={Exception}/>
                     </Switch>
                     <Footer/>
