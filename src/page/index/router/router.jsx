@@ -35,6 +35,7 @@ class router extends React.Component {
                         <Route path="/login" component={Login}/>
                         <Route path="/register" component={Register}/>
                         <Route path="/repassword" component={RePassword}/>
+                        <Route component={Login}/>
                     </Switch>
                 </div>
             </Router>

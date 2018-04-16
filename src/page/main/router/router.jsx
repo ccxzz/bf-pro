@@ -4,6 +4,7 @@ import Header from '../components/header/header';
 import Banner from '../components/banner/banner';
 import Footer from '../components/footer/footer';
 import PlayList from '../components/playlist/playlist';
+import Exception from '../components/exception/exception';
 
 class router extends React.Component {
     constructor() {
@@ -32,6 +33,7 @@ class router extends React.Component {
                     <Header/>
                     <Switch>
                         <Route path="/" exact component={IndexPage}/>
+                        <Route component={Exception}/>
                     </Switch>
                     <Footer/>
                 </div>
