@@ -39,10 +39,9 @@ class menuitem extends React.Component {
                 <Menu.Item key="recharge">
                     <Link to="/recharge">充值</Link>
                 </Menu.Item>
-                <SubMenu title={<span>消息</span>}>
-                    <Menu.Item key="systemMsg">系统公告</Menu.Item>
-                    <Menu.Item key="myselfMsg">我的消息</Menu.Item>
-                </SubMenu>
+                <Menu.Item key="message">
+                    <Link to="/message">消息</Link>
+                </Menu.Item>
                 <Menu.Item key="account">
                     账户中心
                 </Menu.Item>

@@ -10,13 +10,16 @@ import Footer from '../components/footer/footer';
 import PlayList from '../components/playlist/playlist';
 import Exception from '../components/exception/exception';
 import Recharge from '../components/recharge/recharge';
+import Message from '../components/message/message';
 
 let store = createStore(BaseReducer);
 
 class router extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            a: 1
+        };
     }
 
     componentDidMount() {
@@ -30,22 +33,28 @@ class router extends React.Component {
     render() {
         const IndexPage = () => (
             <div>
-                <Header data={{'selectMenu': 'home'}}/>
+                <Header data={{'selectMenu': 'home'}} />
                 <Banner/>
                 <PlayList/>
             </div>
         );
         const RechargePage = () => (
             <div>
-                <Header data={{'selectMenu': 'recharge'}}/>
+                <Header data={{'selectMenu': 'recharge'}} />
                 <Banner/>
                 <Recharge/>
             </div>
         );
         const ExceptionPage = () => (
             <div>
-                <Header data={{'selectMenu': 'home'}}/>
+                <Header data={{'selectMenu': 'home'}} />
                 <Exception/>
+            </div>
+        );
+        const MessagePage = () => (
+            <div>
+                <Header data={{'selectMenu': 'message'}} />
+                <Message/>
             </div>
         );
         return (
@@ -54,7 +63,8 @@ class router extends React.Component {
                     <div>
                         <Switch>
                             <Route path="/" exact component={IndexPage}/>
-                            <Route path="/recharge" exact component={RechargePage}/>
+                            <Route path="/recharge" component={RechargePage}/>
+                            <Route path="/message" component={MessagePage}/>
                             <Route component={ExceptionPage}/>
                         </Switch>
                         <Footer/>
