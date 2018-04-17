@@ -7,17 +7,16 @@ const SubMenu = Menu.SubMenu;
 class menuitem extends React.Component {
     constructor() {
         super();
-        this.state = {
-            current: 'home'
-        };
+        this.state = {};
     }
 
-    handleClick = (e) => {
-        console.log('click ', e);
-        this.setState({
-            current: e.key,
-        });
-    }
+    // handleClick = (e) => {
+    //     if (e.key != this.state.current ) {
+    //         this.setState({
+    //             current: e.key,
+    //         });
+    //     }
+    // }
 
     componentDidMount() {
 
@@ -30,8 +29,8 @@ class menuitem extends React.Component {
     render() {
         return (
             <Menu
-                onClick={this.handleClick}
-                selectedKeys={[this.state.current]}
+                // onClick={this.handleClick}
+                selectedKeys={[this.props.data.selectMenu]}
                 mode="horizontal"
             >
                 <Menu.Item key="home">

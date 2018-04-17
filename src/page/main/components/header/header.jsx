@@ -28,7 +28,7 @@ class header extends React.Component {
                         <span className="websiteName">网站名称</span>
                     </Col>
                     <Col span={14}>
-                        <MenuItem />
+                        <MenuItem data={this.props.data}/>
                     </Col>
                     <Col span={6}>
                         <div className="userLogin">
