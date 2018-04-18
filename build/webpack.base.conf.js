@@ -10,7 +10,7 @@ module.exports = {
             {
                 test: /\.js|jsx$/,
                 loaders: ['babel-loader'],
-                include: [resolvePath('src'), resolvePath('/node_modules/antd')]
+                include: [resolvePath('src')]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
