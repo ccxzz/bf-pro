@@ -2,8 +2,6 @@ import React from 'react';
 import { Menu } from 'antd';
 import { Link } from "react-router-dom";
 
-const SubMenu = Menu.SubMenu;
-
 class menuitem extends React.Component {
     constructor() {
         super();
@@ -43,10 +41,7 @@ class menuitem extends React.Component {
                     <Link to="/message">消息</Link>
                 </Menu.Item>
                 <Menu.Item key="account">
-                    账户中心
-                </Menu.Item>
-                <Menu.Item key="kfService">
-                    客服
+                    <Link to="/account">账户中心</Link>
                 </Menu.Item>
             </Menu>
         );

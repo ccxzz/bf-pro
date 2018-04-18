@@ -11,6 +11,7 @@ import PlayList from '../components/playlist/playlist';
 import Exception from '../components/exception/exception';
 import Recharge from '../components/recharge/recharge';
 import Message from '../components/message/message';
+import Account from '../components/account/account';
 
 let store = createStore(BaseReducer);
 
@@ -57,6 +58,12 @@ class router extends React.Component {
                 <Message/>
             </div>
         );
+        const AccountPage = () => (
+            <div>
+                <Header data={{'selectMenu': 'account'}} />
+                <Account/>
+            </div>
+        );
         return (
             <Provider store={store}>
                 <Router>
@@ -65,6 +72,7 @@ class router extends React.Component {
                             <Route path="/" exact component={IndexPage}/>
                             <Route path="/recharge" component={RechargePage}/>
                             <Route path="/message" component={MessagePage}/>
+                            <Route path="/account" component={AccountPage}/>
                             <Route component={ExceptionPage}/>
                         </Switch>
                         <Footer/>

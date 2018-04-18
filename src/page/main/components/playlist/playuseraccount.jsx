@@ -34,7 +34,7 @@ class playuseraccount extends React.Component {
                     <Col span={16}>
                         <Card style={{ width: '100%' }}>
                             <p className="p-line-height">
-                                展示其他信息
+                                <Avatar icon="bars" /> 展示其他信息
                             </p>
                             <Divider/>
                             <p>
