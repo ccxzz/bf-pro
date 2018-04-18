@@ -13,6 +13,7 @@ class recharge extends React.Component {
             coinListBase:[
                 {
                     id: 0,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "比特币(BTC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -21,6 +22,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 1,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "莱特币(LTC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -29,6 +31,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 2,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "币付币(CPC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -37,6 +40,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 3,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "马特币(MTC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -45,6 +49,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 4,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "服装币(FZC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -53,6 +58,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 5,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "罗素币(RC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -63,6 +69,7 @@ class recharge extends React.Component {
             coinList:[
                 {
                     id: 0,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "比特币(BTC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -71,6 +78,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 1,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "莱特币(LTC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -79,6 +87,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 2,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "币付币(CPC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -87,6 +96,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 3,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "马特币(MTC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -95,6 +105,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 4,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "服装币(FZC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -103,6 +114,7 @@ class recharge extends React.Component {
                 },
                 {
                     id: 5,
+                    img: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
                     name: "罗素币(RC)",
                     leftMoney: "12345",
                     frozenMoney: "112.213",
@@ -162,6 +174,13 @@ class recharge extends React.Component {
             title: '币种',
             dataIndex: 'name',
             key: 'name',
+            render: (text, record) => {
+                return (
+                    <div className="editable-row-operations">
+                        <img className="coinImg" src={record.img}/> &nbsp; {text}
+                    </div>
+                );
+            },
         }, {
             align: "right",
             title: '可用余额',
