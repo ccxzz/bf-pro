@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Card, Divider, Avatar, Row, Col, Button } from 'antd';
 
 class accountmsg extends React.Component {
@@ -34,7 +35,7 @@ class accountmsg extends React.Component {
                     <Col span={16}>
                         <Card style={{ width: '100%' }}>
                             <p className="p-line-height">
-                                <Avatar icon="bars" /> 资产信息
+                                <Avatar icon="bars" /> 其他信息展示
                             </p>
                             <Divider/>
                             <p>

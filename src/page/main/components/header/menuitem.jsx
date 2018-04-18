@@ -43,6 +43,9 @@ class menuitem extends React.Component {
                 <Menu.Item key="account">
                     <Link to="/account">账户中心</Link>
                 </Menu.Item>
+                <Menu.Item key="money">
+                    <Link to="/money">我的资产</Link>
+                </Menu.Item>
             </Menu>
         );
     }

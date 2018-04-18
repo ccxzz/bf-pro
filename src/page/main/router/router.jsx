@@ -12,6 +12,7 @@ import Exception from '../components/exception/exception';
 import Recharge from '../components/recharge/recharge';
 import Message from '../components/message/message';
 import Account from '../components/account/account';
+import MyMoney from '../components/mymoney/mymoney';
 
 let store = createStore(BaseReducer);
 
@@ -64,6 +65,12 @@ class router extends React.Component {
                 <Account/>
             </div>
         );
+        const MyMoneyPage = () => (
+            <div>
+                <Header data={{'selectMenu': 'money'}} />
+                <MyMoney/>
+            </div>
+        );
         return (
             <Provider store={store}>
                 <Router>
@@ -73,6 +80,7 @@ class router extends React.Component {
                             <Route path="/recharge" component={RechargePage}/>
                             <Route path="/message" component={MessagePage}/>
                             <Route path="/account" component={AccountPage}/>
+                            <Route path="/money" component={MyMoneyPage}/>
                             <Route component={ExceptionPage}/>
                         </Switch>
                         <Footer/>
